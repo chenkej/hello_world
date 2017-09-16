@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hello world</title>
+</head>
+<body>
+
+<p>你好世界!</p>
+<div id="main">
+<p> DOM 是非常有用的。</p>
+</div>
+<script>
+getElementsByTagName("p").innerHTML="11111";
+var x=document.getElementById("main");
+var y=getElementByTagName("p");
+document.write('id="main"元素中的第一个段落为：' + y[1].innerHTML);
+</script>
+<script>
+  function loadXML(){
+	var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+	}else{
+		xmlhttp=new ActiveXobject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange= function(){
+		if(xmlhttp.readystate==4 && xmlhttp.statues==200){
+			document.getElementById("id").innerHTML=xmlhttp.responseText;
+		}
+	}
+		xmlhttp.open("post",url,true);
+		xmlhttp.send();
+  }
+  $(document).ready(function(){
+  $.post(url,{name:"dd",url:"sdd"},function(data,status){});
+  
+  });
+</script>
+</body>
+</html>
